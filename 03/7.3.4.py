@@ -60,13 +60,15 @@ class Dog(Animal):
         Dog 类的 say 方法
         
         功能: 演示访问父类的公有方法和私有方法
+        注意: 调用 self.__play() 会抛出 AttributeError 异常
         """
         self.play()  # 成功调用父类的公有方法
 
-        # 错误：无法访问父类的私有方法 __play，因为它被名称改编为 _Animal__play
+        # 错误：无法访问父类的私有方法 __play，会抛出 AttributeError 异常
+        # 因为它被名称改编为 _Animal__play，而 self.__play 会被解析为 _Dog__play
         self.__play()
 
 # 创建 Dog 对象
 dog = Dog()
-# 调用 say 方法，会在尝试调用 self.__play() 时报错
+# 调用 say 方法，会在尝试调用 self.__play() 时抛出 AttributeError 异常
 dog.say()

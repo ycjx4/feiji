@@ -50,5 +50,5 @@ class Dog(Animal):
 # 创建 Dog 对象
 dog = Dog()
 
-# 错误：调用 play 方法时会报错，因为 self.name 属性未定义
+# 错误：调用 play 方法时会抛出 AttributeError 异常，因为 self.name 属性未定义
 dog.play()
