@@ -2,5 +2,5 @@
 # -*- coding: utf-8 -*-
 
 class Animal:
-    name = "动物"
+    name = "动物"  # 类属性
     
